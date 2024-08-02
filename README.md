@@ -3,8 +3,8 @@
 # Quick Start
 
 ```bash
-git clone https://github.com/v1tam1nb2/openresty-cloudbeaver.git
-cd openresty-cloudbeaver
+git clone https://github.com/v1tam1nb2/openresty-cloudbeaver-ce.git
+cd openresty-cloudbeaver-ce
 docker compose up -d
 ```
 

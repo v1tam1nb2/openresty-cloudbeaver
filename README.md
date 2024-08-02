@@ -11,3 +11,5 @@ docker compose up -d
 # Access
 
 - [http://localhost:8888/](http://localhost:8888/)
+
+![home](./image/home.png)

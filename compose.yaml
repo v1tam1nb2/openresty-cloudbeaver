@@ -1,0 +1,34 @@
+services:
+  openresty:
+    container_name: openresty
+    hostname: openresty
+    image: bitnami/openresty:latest
+    restart: always
+    ports:
+      - 8888:80
+    volumes:
+     - ./src/openresty/nginx.conf:/opt/bitnami/openresty/nginx/conf/nginx.conf
+
+  cloudbeaver:
+    container_name: cloudbeaver
+    hostname: cloudbeaver
+    image: dbeaver/cloudbeaver:24.1.3
+    restart: always
+    ports:
+      - 8978:8978
+    volumes:
+      - ./src/cloudbeaver/cloudbeaver.conf:/opt/cloudbeaver/conf/cloudbeaver.conf
+      - ./cb_data/cloudbeaver/workspace:/opt/cloudbeaver/workspace
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:23.3.8.21
+    container_name: clickhouse
+    hostname: clickhouse
+    restart: always
+    ports:
+      - 8123:8123
+    volumes:
+    - ./ch_data/var/lib/clickhouse:/var/lib/clickhouse
+    - ./ch_data/var/log/clickhouse-server:/var/log/clickhouse-server
+    - ./src/clickhouse/data/etc/clickhouse-server/users.d:/etc/clickhouse-server/users.d
+    - ./src/clickhouse/data/etc/clickhouse-server/config.d:/etc/clickhouse-server/config.d

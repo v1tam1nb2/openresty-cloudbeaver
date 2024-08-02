@@ -8,6 +8,7 @@ services:
       - 8888:80
     volumes:
      - ./src/openresty/nginx.conf:/opt/bitnami/openresty/nginx/conf/nginx.conf
+     - ./src/openresty/.htpasswd:/etc/nginx/.htpasswd
 
   cloudbeaver:
     container_name: cloudbeaver

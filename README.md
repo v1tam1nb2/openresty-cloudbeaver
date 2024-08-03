@@ -15,3 +15,10 @@ docker compose up -d
   - Password:`password`
 
 ![home](./image/home.png)
+
+# ClickHouse connection information
+
+- User name
+  - `testuser`
+- User password
+  - `password`

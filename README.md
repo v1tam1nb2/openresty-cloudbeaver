@@ -11,5 +11,7 @@ docker compose up -d
 # Access
 
 - [http://localhost:8888/](http://localhost:8888/)
+  - User:`cbuser`
+  - Password:`password`
 
 ![home](./image/home.png)
